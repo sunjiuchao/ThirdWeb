@@ -14,17 +14,21 @@ public class MysqlCommitDemo02 {
         Connection connection = DriverManager.getConnection(url, username, password);
         Statement stmt = connection.createStatement();
 
-//        CRUD
+//        开启事务
+        try {
+            connection.setAutoCommit(false);
+            String sql1 = "update user set money = 600 where name = '李达' ";
+            int re1 = stmt.executeUpdate(sql1);
+            System.out.println(re1);
+            int s = 3/0;
+            String sql2 = "update user set money = 700 where name = '李达' ";
+            int re2 = stmt.executeUpdate(sql2);
+            System.out.println(re2);
 
-
-        String sql1 = "update user set money = 400 where name = '李达' ";
-        int re1 = stmt.executeUpdate(sql1);
-        System.out.println(re1);
-
-        int s = 3/0;
-
-        String sql2 = "update user set money = 500 where name = '李达' ";
-        int re2 = stmt.executeUpdate(sql2);
-        System.out.println(re2);
+            connection.commit();
+        } catch (SQLException e) {
+            connection.rollback();
+            e.getStackTrace();
+        }
     }
 }
