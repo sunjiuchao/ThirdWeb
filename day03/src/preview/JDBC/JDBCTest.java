@@ -6,8 +6,8 @@ import java.sql.Statement;
 
 public class JDBCTest {
     public static void main(String[] args) throws Exception {
-        Class.forName("com.mysql.jdbc.Driver");
-        String url = "jdbc:mysql://127.0.0.1:3306/day02";
+//        Class.forName("com.mysql.jdbc.Driver");
+        String url = "jdbc:mysql:///day02?useSSL=false";
         String username = "root";
         String password = "123456";
 
