@@ -1,5 +1,7 @@
 package preview.JDBC;
 
+import CustClass.TimeSecond;
+
 import java.sql.*;
 import java.util.ArrayList;
 
@@ -12,7 +14,7 @@ public class MysqlResultSetDome01 {
         String password = "123456";
         Connection connection = DriverManager.getConnection(url, username, password);
         Statement stmt = connection.createStatement();
-
+        TimeSecond ts = new TimeSecond();
         String Q1= "select * from user";
 
         ResultSet re = stmt.executeQuery(Q1);
