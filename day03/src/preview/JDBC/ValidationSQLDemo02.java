@@ -11,8 +11,8 @@ public class ValidationSQLDemo02 {
         Connection conn = DriverManager.getConnection(url, username, password);//连接数据库
 
         String usename = "孙久超";
-//        String pwd = "'or' 1 ' = ' 1";//注入
-        String pwd = "123456";
+        String pwd = "'or' 1 ' = ' 1";//注入
+//        String pwd = "123456";
 
         String sql = "select * from user where name = ? and password = ?";//sql语句
 

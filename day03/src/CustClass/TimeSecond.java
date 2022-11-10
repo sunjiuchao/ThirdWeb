@@ -1,7 +1,6 @@
 package CustClass;
 
 public class TimeSecond {
-
     public static int Second_time() {
         long l = System.currentTimeMillis();
         String s = String.valueOf(l);
