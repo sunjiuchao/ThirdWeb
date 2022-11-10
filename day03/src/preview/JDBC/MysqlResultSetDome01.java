@@ -7,7 +7,6 @@ public class MysqlResultSetDome01 {
     public static void main(String[] args) throws SQLException {
         ArrayList<User> list = new ArrayList<>();
 
-
         String url = "jdbc:mysql:///dau03?useSSL = false";
         String username = "root";
         String password = "123456";

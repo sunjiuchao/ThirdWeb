@@ -8,6 +8,7 @@ public class JDBCTest {
     public static void main(String[] args) throws Exception {
 //        Class.forName("com.mysql.jdbc.Driver");
         String url = "jdbc:mysql:///day02?useSSL=false";
+
         String username = "root";
         String password = "123456";
 
@@ -19,5 +20,7 @@ public class JDBCTest {
         boolean result = stmt.execute(sql);//执行语句
 
         System.out.println(result);
+
+
     }
 }
