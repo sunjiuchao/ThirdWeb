@@ -1,3 +1,5 @@
+package CustClass;
+
 public class TimeSecond {
 
     public static int Second_time() {
