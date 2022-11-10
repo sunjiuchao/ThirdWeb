@@ -6,12 +6,10 @@ import preview.JDBC.User;
 
 import javax.sql.DataSource;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Properties;
 
 public class Query_DruidTest02 {
